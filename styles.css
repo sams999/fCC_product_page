@@ -70,11 +70,13 @@ li:hover {
 
 .hero {
   margin: 0 auto 30px;
+  height: 100vh;
+  max-width: 1080px;
   padding: 5px;
   text-align: center;
   background-image: url(./images/microgreens_background.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size:cover;
+  background-repeat: round;
   height: 80vh;
   border-bottom: 2px solid rgba(120, 136, 98, 0.6);
   display: flex;
@@ -86,6 +88,7 @@ li:hover {
 .hero-text {
   background: rgb(235, 224, 210);
   width: 300px;
+  min-height: 150px;
   margin: 0 auto 30px;
   padding: 3px;
   border: 1px solid rgba(120, 136, 98, 0.6);
@@ -157,6 +160,7 @@ footer {
 .feature {
   display: flex;
   margin: 30px auto;
+  max-width: 1080px;
 }
 
 .main-header{
@@ -173,10 +177,11 @@ footer {
 
 .pricing {
   display: flex;
+  flex: 1;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 30px 20px 0;
-  gap: 20px;  
+  gap: 3rem;  
 }
 
 .package {
@@ -188,7 +193,8 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
+  border: 3px solid rgb(120, 136, 98);
 }
 
 .package_description {
@@ -321,7 +327,10 @@ footer  a {
 
   .package {
     width: 100%;
+    height: 35vh;
+    min-height: 350px;
     max-width: 350px;
+    
   }
 
   .package_pricing {
@@ -349,9 +358,18 @@ footer  a {
   }
 }
 
-@media (max-width: 400px) {
-  .hero {
-    background-size:contain;
-    background-repeat: repeat-y;
+@media (max-width: 600px) {
+  #logo {
+    width: 300px;
+  }
+}
+
+@media (max-height: 800px) {
+  .hero-text {
+    height: 120px;
+  }
+
+  #submit {
+    height: 20px;
   }
 }
